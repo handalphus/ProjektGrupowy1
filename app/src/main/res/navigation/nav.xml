@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav"
+    app:startDestination="@id/welcomeFragment">
+
+    <fragment
+        android:id="@+id/welcomeFragment"
+        android:name="com.example.projektgrupowy.view.WelcomeFragment"
+        android:label="fragment_welcome"
+        tools:layout="@layout/fragment_welcome" >
+        <action
+            android:id="@+id/action_welcomeFragment_to_gameFragment"
+            app:destination="@id/gameFragment" />
+        <action
+            android:id="@+id/action_welcomeFragment_to_localPlayerFragment"
+            app:destination="@id/localPlayerFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/gameFragment"
+        android:name="com.example.projektgrupowy.view.GameFragment"
+        android:label="fragment_game"
+        tools:layout="@layout/fragment_game" >
+        <action
+            android:id="@+id/action_gameFragment_to_addAnimalsFragment"
+            app:destination="@id/addAnimalsFragment" />
+        <action
+            android:id="@+id/action_gameFragment_to_welcomeFragment"
+            app:destination="@id/welcomeFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/addAnimalsFragment"
+        android:name="com.example.projektgrupowy.view.AddAnimalsFragment"
+        android:label="fragment_add_animals"
+        tools:layout="@layout/fragment_add_animals" >
+        <action
+            android:id="@+id/action_addAnimalsFragment_to_gameFragment"
+            app:destination="@id/gameFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/localPlayerFragment"
+        android:name="com.example.projektgrupowy.view.LocalPlayerFragment"
+        android:label="fragment_local_player"
+        tools:layout="@layout/fragment_local_player" >
+        <action
+            android:id="@+id/action_localPlayerFragment_to_welcomeFragment"
+            app:destination="@id/welcomeFragment" />
+    </fragment>
+</navigation>
